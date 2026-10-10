@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>個人履歷</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{
+    --ink:#1f2933; --muted:#5f6b7a; --line:#d9dee5; --accent:#8b1e2d; --accent-soft:#f6eaec;
+    --bg:#eef0f3; --paper:#ffffff; --blank:#a0a8b3;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif;line-height:1.75;font-size:15px}
+  .page{max-width:860px;margin:32px auto;background:var(--paper);padding:48px 56px;
+    box-shadow:0 2px 16px rgba(0,0,0,.08);border-top:6px solid var(--accent)}
+  h1{margin:0;font-size:30px;letter-spacing:.15em}
+  .subtitle{color:var(--muted);margin:4px 0 0}
+  h2{font-size:19px;color:var(--accent);margin:36px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-soft);letter-spacing:.08em}
+  .blank{display:inline-block;min-width:7em;border-bottom:1px dashed var(--blank);color:var(--blank);font-size:.9em}
+  .blank:empty::after{content:"待補"}
+
+  /* 個人資料 */
+  .profile{display:grid;grid-template-columns:1fr 132px;gap:24px;align-items:start;margin-top:20px}
+  .info{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;margin:0}
+  .info div{display:flex;gap:8px}
+  .info dt{color:var(--muted);white-space:nowrap;min-width:5.5em}
+  .info dd{margin:0}
+  .photo{width:132px;height:170px;border:1px dashed var(--blank);display:flex;align-items:center;justify-content:center;color:var(--blank);font-size:13px}
+  .photo img{width:100%;height:100%;object-fit:cover}
+
+  /* 工作經歷 */
+  .job{margin:0 0 28px;page-break-inside:avoid}
+  .job h3{margin:0;font-size:17px}
+  .job .meta{display:flex;flex-wrap:wrap;gap:4px 24px;color:var(--muted);margin:2px 0 8px}
+  .job .meta b{color:var(--ink);font-weight:600}
+  .duty-title{font-weight:600;margin:6px 0 2px}
+  ol.cat{margin:0;padding-left:1.6em}
+  ol.cat>li{margin:6px 0;font-weight:600}
+  ol.cat ul{font-weight:400;margin:2px 0;padding-left:1.4em;list-style:circle}
+  ol.cat ul ul{list-style:square}
+  .k{font-weight:600}
+
+  ul.plain{margin:0;padding-left:1.3em}
+  ul.plain li{margin:3px 0}
+  p{margin:0 0 10px}
+  .edu td{padding:4px 16px 4px 0;vertical-align:top}
+  .edu td:first-child{font-weight:600}
+
+  @media (max-width:640px){
+    body{font-size:14px}
+    .page{margin:0;padding:28px 16px}
+    .profile{grid-template-columns:1fr}
+    .photo{order:-1}
+    .info{grid-template-columns:1fr}
+  }
+  @media print{
+    @page{size:A4;margin:14mm}
+    body{background:#fff;font-size:12.5px}
+    .page{box-shadow:none;margin:0;max-width:none;padding:0;border-top:none}
+    h2{margin-top:22px}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <header>
+    <h1><span class="blank"></span></h1>
+    <p class="subtitle">應徵：採購管理／專案執行／物料管理／生產協調／物流調度／營運管理</p>
+  </header>
+
+  <!-- 一、個人資料：留空處待本人提供 -->
+  <h2>一、個人資料</h2>
+  <section class="profile">
+    <dl class="info">
+      <div><dt>姓名</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>英文姓名</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>性別</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>出生年月日</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>手機</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>Email</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>居住地</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>兵役狀況</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>駕照</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>交通工具</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>希望地點</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>希望待遇</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>可上班日</dt><dd><span class="blank"></span></dd></div>
+      <div><dt>語言能力</dt><dd><span class="blank"></span></dd></div>
+    </dl>
+    <div class="photo">大頭照</div>
+  </section>
+
+  <h2>二、自我介紹</h2>
+  <p>具備採購、物流倉儲、生產協調、業務行政、進出口文件、專案執行及門市營運等多元實務經驗。過去工作內容涵蓋供應商聯繫、詢價議價、報價處理、採購訂單、進出貨管理、庫存管理、物流調度、退貨異常處理及訂單進度追蹤。</p>
+  <p>早期於女鞋品牌公司負責百貨專櫃售後服務、特殊尺寸訂單、商品配貨、退換貨、廠商聯繫、鞋款樣式修改協調及專櫃巡查；後續累積物流倉儲、採購、機械業務行政與進出口文件等經驗。曾參與專案執行、客戶溝通、設備維修派工、外包工班協調、維修費用結算、發票及請款流程。另有約七年早餐店經營經驗，熟悉食材採購、庫存管理、人員安排及日常營運。</p>
+  <p>期望將過往經驗運用於採購管理、專案執行、資材管理、生產協調、物流調度或營運管理相關職務，並持續精進 Excel 資料處理、採購實務及成本分析能力。</p>
+
+  <h2>三、工作經歷</h2>
+
+  <article class="job">
+    <h3>陽基開發股份有限公司（Diana 女鞋）</h3>
+    <div class="meta"><span><b>職務：</b>業務助理</span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>商品管理
+        <ul>
+          <li>彙整各專櫃訂單需求（含小尺寸、大尺寸等特殊規格），回應客戶訂單需求</li>
+          <li>倉儲
+            <ul>
+              <li><span class="k">商品調度：</span>總貨源管控，依各專櫃需求與熱銷款式協調配貨</li>
+              <li><span class="k">品質管理：</span>進出貨檢核（目視檢查為主），倉儲環境維護</li>
+            </ul>
+          </li>
+          <li>售後服務
+            <ul>
+              <li><span class="k">商品維修：</span>接收專櫃回報之顧客問題，聯繫維修窗口</li>
+              <li><span class="k">商品退換貨：</span>處理收據及退換貨服務，協調後續處理流程</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>倉儲
+        <ul><li><span class="k">貨源管理：</span>掌握庫存與貨源狀況，支援各專櫃補貨</li></ul>
+      </li>
+      <li>客戶管理
+        <ul>
+          <li><span class="k">專案客戶管理：</span>鞋類世貿展覽參展，聯繫廠商客戶準備展覽事宜，協助下單及追蹤訂單</li>
+          <li><span class="k">B2B 客戶管理：</span>依據交期掌握商品貨源調度；配合鞋款版本、樣式修改需求與廠商溝通協調</li>
+        </ul>
+      </li>
+      <li>日常作業
+        <ul>
+          <li><span class="k">櫃位銷售：</span>商品陳列、櫃位擺設調整，現場為客戶推薦鞋款</li>
+          <li><span class="k">活動支援：</span>依專櫃活動需求，安排布置設備及物品準備與寄送</li>
+          <li><span class="k">會計管理：</span>每日出入帳核對，每月收支管理分析</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>瀚文紙業</h3>
+    <div class="meta"><span><b>職務：</b>物流／倉儲人員</span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>倉儲管理
+        <ul>
+          <li><span class="k">進出貨管理：</span>處理貨品進貨、出貨及相關作業</li>
+          <li><span class="k">庫存管理：</span>執行庫存盤點及貨品數量核對</li>
+        </ul>
+      </li>
+      <li>物流調度
+        <ul>
+          <li><span class="k">派車安排：</span>安排車趟、派車及物流配送事宜</li>
+          <li><span class="k">運輸協調：</span>協調出貨時程與運輸安排，配合內部需求調整物流作業流程</li>
+        </ul>
+      </li>
+      <li>異常處理
+        <ul><li><span class="k">退貨／出貨異常：</span>處理退貨、出貨異常並追蹤至結案</li></ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>捷能達</h3>
+    <div class="meta"><span><b>職務：</b>採購人員</span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>供應商管理
+        <ul>
+          <li><span class="k">詢價議價：</span>聯繫供應商，處理詢價、報價及議價事宜</li>
+          <li><span class="k">供應商開發：</span>協助開發新供應商，維護既有供應商關係</li>
+        </ul>
+      </li>
+      <li>採購作業
+        <ul>
+          <li><span class="k">採購單作業：</span>處理訂單、採購單及相關採購流程</li>
+          <li><span class="k">進退貨追蹤：</span>協助進貨、退貨及異常狀況追蹤</li>
+        </ul>
+      </li>
+      <li>業務支援
+        <ul>
+          <li><span class="k">報價資料：</span>整理供應商報價及銷售報價資料，配合業務需求處理報價與訂單</li>
+          <li><span class="k">行政管理：</span>協助處理佣金相關資料及管理事務</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>川聯機械</h3>
+    <div class="meta"><span><b>職務：</b>業務行政</span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>業務行政
+        <ul><li><span class="k">訂單作業：</span>協助處理業務相關行政及訂單作業</li></ul>
+      </li>
+      <li>進出口文件
+        <ul>
+          <li><span class="k">文件製作：</span>製作及整理 Invoice（商業發票）、Packing List（裝箱單）</li>
+          <li><span class="k">流程配合：</span>配合進出口貨物相關文件及作業流程</li>
+        </ul>
+      </li>
+      <li>物流協調
+        <ul><li><span class="k">進出貨安排：</span>協助進出貨、派車及相關物流協調</li></ul>
+      </li>
+      <li>跨部門支援
+        <ul>
+          <li><span class="k">部門協作：</span>配合採購及其他部門需求，處理聯繫與作業事項</li>
+          <li><span class="k">展覽支援：</span>參與機械展覽及相關活動支援</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>億楊金屬</h3>
+    <div class="meta"><span><b>職務：</b>生產／物流協調</span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>生產管理
+        <ul><li><span class="k">進度追蹤：</span>追蹤生產及訂單進度，掌握工作執行狀況</li></ul>
+      </li>
+      <li>物流管理
+        <ul>
+          <li><span class="k">進出貨安排：</span>處理進貨、出貨及相關物流安排</li>
+          <li><span class="k">派車協調：</span>協調派車、出貨時程與相關作業事項</li>
+        </ul>
+      </li>
+      <li>客戶與採購
+        <ul>
+          <li><span class="k">客戶聯繫：</span>與客戶及業務端聯繫，協調訂單及交貨問題</li>
+          <li><span class="k">物料採購：</span>協助採購及物料相關事務，配合現場需求處理作業</li>
+        </ul>
+      </li>
+      <li>行政支援
+        <ul><li><span class="k">人事協助：</span>協助安排面試及相關人員聯繫事宜</li></ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>早餐店經營</h3>
+    <div class="meta"><span><b>職務：</b>店長／經營者</span><span><b>任職期間：</b>約七年（<span class="blank"></span>）</span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>門市營運
+        <ul>
+          <li><span class="k">日常營運：</span>負責開店準備及現場作業安排</li>
+          <li><span class="k">外送平台：</span>處理外送平台訂單及門市日常事務</li>
+        </ul>
+      </li>
+      <li>採購與庫存
+        <ul>
+          <li><span class="k">食材採購：</span>聯繫供應商，採購食材與營運用品，處理進貨驗收</li>
+          <li><span class="k">庫存管理：</span>掌握備料需求與耗用情況，依營運狀況調整採購及備料</li>
+        </ul>
+      </li>
+      <li>人員管理
+        <ul><li><span class="k">排班調度：</span>安排人員工作及班表，協調現場工作流程</li></ul>
+      </li>
+      <li>顧客服務
+        <ul><li><span class="k">收銀與客服：</span>負責收銀、顧客服務、訂單處理及客訴應對</li></ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>車威視科技</h3>
+    <div class="meta"><span><b>職務：</b>專案人員／主管助理</span><span><b>任職期間：</b>2021 年 6 月 – 2024 年 8 月（約 3 年 3 個月）</span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li>專案執行
+        <ul>
+          <li><span class="k">專案協助：</span>協助中華電信相關專案執行及客戶聯繫（含嘉里大樓），配合車隊管理及車視影像設備業務</li>
+        </ul>
+      </li>
+      <li>維修管理
+        <ul>
+          <li><span class="k">報修受理：</span>受理設備故障、交通事故設備損壞及遠端監控／影像系統異常等維修需求</li>
+          <li><span class="k">派工協調：</span>協調外包維修工班，安排服務車輛及維修時間，追蹤案件進度</li>
+          <li><span class="k">原因判定：</span>依維修紀錄與現場資訊，協助確認設備損壞原因及後續處理方式</li>
+        </ul>
+      </li>
+      <li>費用與帳務
+        <ul><li><span class="k">結算請款：</span>彙整維修紀錄及工班費用，辦理外包費用結算、內部核銷、發票及請款</li></ul>
+      </li>
+      <li>溝通協調
+        <ul><li><span class="k">跨單位溝通：</span>與客戶、內部專案團隊及外包廠商溝通，協調維修安排與現場作業</li></ul>
+      </li>
+      <li>採購與其他
+        <ul>
+          <li><span class="k">零件採購：</span>協助車輛設備及零件採購，處理部分進出口事務</li>
+          <li><span class="k">活動規劃：</span>參與公司形象及部門活動規劃，安排活動流程、交通與行程</li>
+        </ul>
+      </li>
+    </ol>
+  </article>
+
+  <article class="job">
+    <h3>台亞</h3>
+    <div class="meta"><span><b>職務：</b><span class="blank"></span></span><span><b>任職期間：</b><span class="blank"></span></span></div>
+    <div class="duty-title">職責工作細節：</div>
+    <ol class="cat">
+      <li><span class="blank"></span></li>
+    </ol>
+  </article>
+
+  <h2>四、學歷</h2>
+  <table class="edu">
+    <tr><td>中國海事專科學校（現台北海洋科技大學）</td><td>國際貿易科</td><td>二專畢業</td></tr>
+    <tr><td>育達商職</td><td>資料處理科</td><td><span class="blank"></span></td></tr>
+  </table>
+
+  <h2>五、專長與技能</h2>
+  <ul class="plain">
+    <li><span class="k">採購與供應商管理：</span>供應商聯繫、詢價議價、報價處理、採購單作業、訂單追蹤、進貨與退貨</li>
+    <li><span class="k">商品與售後服務：</span>百貨專櫃需求彙整、特殊尺寸訂單、商品配貨、退換貨、巡櫃及陳列支援</li>
+    <li><span class="k">物流與物料管理：</span>進出貨管理、庫存管理、物流調度、車趟安排、退貨及出貨異常追蹤</li>
+    <li><span class="k">專案與營運協調：</span>專案執行、客戶溝通、維修派工、外包廠商協調、費用結算、核銷及請款</li>
+    <li><span class="k">進出口文件：</span>Invoice（商業發票）、Packing List（裝箱單）</li>
+    <li><span class="k">門市營運：</span>供應商管理、食材採購、庫存管理、人員安排、收銀、顧客服務</li>
+    <li><span class="k">辦公軟體：</span>Word、Excel、PowerPoint、Outlook</li>
+  </ul>
+
+  <h2>六、證照</h2>
+  <ul class="plain">
+    <li>會計事務 丙級：<span class="blank"></span></li>
+    <li>電腦軟體應用（Word）丙級：<span class="blank"></span></li>
+  </ul>
+
+  <h2>七、求職方向／職涯目標</h2>
+  <p>希望應徵採購管理、專案執行、物料管理、生產協調、物流調度或營運管理相關職務。過去工作經驗橫跨商品售後服務、採購、物流倉儲、生產進度追蹤、進出口文件、設備維修協調及門市營運，具備實務執行與跨單位溝通經驗。期望運用既有經驗，並持續加強 Excel、採購實務、成本分析及資材管理能力。</p>
+
+</main>
+</body>
+</html>
