@@ -48,7 +48,27 @@
   .edu td{padding:4px 16px 4px 0;vertical-align:top}
   .edu td:first-child{font-weight:600}
 
+  /* 照片牆／預留區塊（純色佔位，之後替換成 <img>） */
+  .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .gallery figure{margin:0;page-break-inside:avoid}
+  .ph{aspect-ratio:4/3;border-radius:6px;display:flex;align-items:center;justify-content:center;
+    color:rgba(255,255,255,.9);font-size:13px;letter-spacing:.1em;overflow:hidden}
+  .ph img{width:100%;height:100%;object-fit:cover}
+  .c1{background:#8b1e2d}.c2{background:#c9a24d}.c3{background:#4a6b5d}
+  .c4{background:#3e5c76}.c5{background:#b56b45}.c6{background:#6d5a7b}
+  .gallery figcaption{font-size:13px;margin-top:6px}
+  .gallery figcaption b{display:block;font-size:14px}
+  .gallery figcaption span{color:var(--muted)}
+  .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .card{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:6px;padding:10px 14px}
+  .card b{display:block}
+  .card span{color:var(--muted);font-size:13px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .tags li{padding:4px 14px;border-radius:999px;color:#fff;font-size:13px}
+
   @media (max-width:640px){
+    .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .cards{grid-template-columns:1fr}
     body{font-size:14px}
     .page{margin:0;padding:28px 16px}
     .profile{grid-template-columns:1fr}
@@ -309,13 +329,31 @@
     </ol>
   </article>
 
-  <h2>四、學歷</h2>
+  <!-- 四、專案作品：把 <div class="ph c1">…</div> 裡換成 <img src="photos/xxx.jpg" alt="…"> 即可 -->
+  <h2>四、專案作品集</h2>
+  <div class="gallery">
+    <figure><div class="ph c1">專案照片 1</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+    <figure><div class="ph c2">專案照片 2</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+    <figure><div class="ph c3">專案照片 3</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+    <figure><div class="ph c4">專案照片 4</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+    <figure><div class="ph c5">專案照片 5</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+    <figure><div class="ph c6">專案照片 6</div><figcaption><b>專案名稱</b><span>年份｜角色｜簡短說明</span></figcaption></figure>
+  </div>
+
+  <h2>五、展覽與活動紀錄</h2>
+  <div class="gallery">
+    <figure><div class="ph c4">活動照片 1</div><figcaption><b>活動名稱</b><span>例：鞋類世貿展覽</span></figcaption></figure>
+    <figure><div class="ph c2">活動照片 2</div><figcaption><b>活動名稱</b><span>例：機械展覽</span></figcaption></figure>
+    <figure><div class="ph c3">活動照片 3</div><figcaption><b>活動名稱</b><span>例：部門活動規劃</span></figcaption></figure>
+  </div>
+
+  <h2>六、學歷</h2>
   <table class="edu">
     <tr><td>中國海事專科學校（現台北海洋科技大學）</td><td>國際貿易科</td><td>二專畢業</td></tr>
     <tr><td>育達商職</td><td>資料處理科</td><td><span class="blank"></span></td></tr>
   </table>
 
-  <h2>五、專長與技能</h2>
+  <h2>七、專長與技能</h2>
   <ul class="plain">
     <li><span class="k">採購與供應商管理：</span>供應商聯繫、詢價議價、報價處理、採購單作業、訂單追蹤、進貨與退貨</li>
     <li><span class="k">商品與售後服務：</span>百貨專櫃需求彙整、特殊尺寸訂單、商品配貨、退換貨、巡櫃及陳列支援</li>
@@ -326,13 +364,50 @@
     <li><span class="k">辦公軟體：</span>Word、Excel、PowerPoint、Outlook</li>
   </ul>
 
-  <h2>六、證照</h2>
-  <ul class="plain">
-    <li>會計事務 丙級：<span class="blank"></span></li>
-    <li>電腦軟體應用（Word）丙級：<span class="blank"></span></li>
-  </ul>
+  <h2>八、證照</h2>
+  <div class="cards">
+    <div class="card"><b>會計事務 丙級</b><span>取得日期：<span class="blank"></span></span></div>
+    <div class="card"><b>電腦軟體應用（Word）丙級</b><span>取得日期：<span class="blank"></span></span></div>
+    <div class="card"><b>證照名稱</b><span>取得日期：<span class="blank"></span></span></div>
+    <div class="card"><b>證照名稱</b><span>取得日期：<span class="blank"></span></span></div>
+  </div>
 
-  <h2>七、求職方向／職涯目標</h2>
+  <h2>九、進修與培訓課程</h2>
+  <div class="cards">
+    <div class="card"><b>課程名稱</b><span>例：Excel 資料處理／採購實務／成本分析｜時數、機構</span></div>
+    <div class="card"><b>課程名稱</b><span>時數、機構、完成日期</span></div>
+  </div>
+
+  <h2>十、獲獎與表揚</h2>
+  <div class="cards">
+    <div class="card"><b>獎項名稱</b><span>年份｜頒發單位｜簡短說明</span></div>
+    <div class="card"><b>獎項名稱</b><span>年份｜頒發單位｜簡短說明</span></div>
+  </div>
+
+  <h2>十一、社團／志工經歷</h2>
+  <div class="cards">
+    <div class="card"><b>社團／組織名稱</b><span>期間｜擔任角色｜參與內容</span></div>
+    <div class="card"><b>社團／組織名稱</b><span>期間｜擔任角色｜參與內容</span></div>
+  </div>
+
+  <h2>十二、興趣與嗜好</h2>
+  <ul class="tags">
+    <li class="c1">興趣 1</li><li class="c2">興趣 2</li><li class="c3">興趣 3</li>
+    <li class="c4">興趣 4</li><li class="c5">興趣 5</li>
+  </ul>
+  <div class="gallery" style="margin-top:12px">
+    <figure><div class="ph c5">生活照 1</div></figure>
+    <figure><div class="ph c6">生活照 2</div></figure>
+    <figure><div class="ph c1">生活照 3</div></figure>
+  </div>
+
+  <h2>十三、推薦人</h2>
+  <div class="cards">
+    <div class="card"><b>推薦人姓名</b><span>公司／職稱｜關係｜聯絡方式</span></div>
+    <div class="card"><b>推薦人姓名</b><span>公司／職稱｜關係｜聯絡方式</span></div>
+  </div>
+
+  <h2>十四、求職方向／職涯目標</h2>
   <p>希望應徵採購管理、專案執行、物料管理、生產協調、物流調度或營運管理相關職務。過去工作經驗橫跨商品售後服務、採購、物流倉儲、生產進度追蹤、進出口文件、設備維修協調及門市營運，具備實務執行與跨單位溝通經驗。期望運用既有經驗，並持續加強 Excel、採購實務、成本分析及資材管理能力。</p>
 
 </main>
